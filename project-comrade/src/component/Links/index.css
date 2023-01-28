@@ -1,0 +1,16 @@
+.delete:hover .deleteIcon{
+    display:inline-block;
+}
+.delete:hover{
+    background: red !important;
+}
+.delete{
+    position: relative;
+}
+.deleteIcon{
+    display: none;
+    position: absolute;
+    right:40px;
+    top:25%;
+    cursor: pointer;
+}
