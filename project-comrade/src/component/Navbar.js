@@ -11,7 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+import AddPost from "../component/AddPost";
 
 const pages = ['Project_Lists'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -53,11 +53,12 @@ function ResponsiveAppBar() {
               letterSpacing: '.1rem',
               color: 'inherit',
               textDecoration: 'none',
+              
             }}
           >
             FindComrade
           </Typography>
-
+          
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -69,12 +70,15 @@ function ResponsiveAppBar() {
             >
               <MenuIcon />
             </IconButton>
+
+            
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: 'bottom',
                 horizontal: 'left',
+                // border:'2px solid red',
               }}
               keepMounted
               transformOrigin={{
@@ -94,6 +98,7 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
+          
           <Typography
             variant="h5"
             noWrap
@@ -123,7 +128,7 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-
+          
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
