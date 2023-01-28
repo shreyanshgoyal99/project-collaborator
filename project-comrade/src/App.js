@@ -6,18 +6,14 @@ import Feed from "./component/Feed";
 import Home from "./pages/Home";
 import Login from "./pages/Login/index";
 import Signup from "./pages/Signup/index";
+import Dashboard from "./pages/Dashboard/index"
 import { Route, Routes} from "react-router-dom";
 
 function App() {
   return (
     <div>
       <Navbar/>
-      <Routes>
-        <Route exact path="/" element={<Home/>} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/signup" element={<Signup/>} />
-        <Route path="/profile" element={<Profile/>} />
-      </Routes>
+      <Dashboard/>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React,{Component} from "react"
 import Feed from "../../component/Feed";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 class Home extends Component {
 
 constructor(props) {    
