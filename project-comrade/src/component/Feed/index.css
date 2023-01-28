@@ -1,0 +1,15 @@
+.interested{
+    padding:10px 20px;
+    border:1px solid #3767dc;
+    border-radius:5px;
+    float:right;
+    cursor: pointer;
+}
+
+.not-interested{
+    padding:10px 20px;
+    border:1px solid red;
+    border-radius:5px;
+    float:right;
+    cursor: pointer;
+}
