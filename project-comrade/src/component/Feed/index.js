@@ -53,12 +53,13 @@ render() {
         </DialogContent>
         <DialogActions>
           <Button onClick={this.handleClose}>Cancel</Button>
-          <Button onClick={this.handleClose}>Subscribe</Button>
+          <Button onClick={()=>{this.handleClose()}}>Send</Button>
         </DialogActions>
       </Dialog>
         <Card style={{width:"70%", margin:"0 auto", padding:"20px", margin:"20px auto"}}>
-            <p style={{fontWeight:"500", fontSize:"20px"}}> The Project Name</p>
-            <p> Project Description Project DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject Description</p>
+            <p style={{fontWeight:"500", fontSize:"20px"}}> Project: Leetcode Time Analyzer</p>
+            <p>
+The Leetcode Time Analyzer is a web app that allows users to track and analyze the time they spend solving Leetcode coding challenges. With this app, users can add data about the time they take to solve a particular question, along with tags and the difficulty of the question. The app then generates bar charts that visualize this data, allowing users to see how their performance on Leetcode varies by difficulty and by tag. The charts are also customizable, allowing users to filter the data by tag to see their performance on specific types of questions.</p>
             <p>Tech Stack</p>
             <div>
             <Chip style={{margin:"0 10px"}} label="React" />
