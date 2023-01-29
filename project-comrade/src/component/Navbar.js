@@ -12,9 +12,10 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AddPost from "../component/AddPost";
+import { Link } from 'react-router-dom';
 
 const pages = [];
-const settings = ['Profile', 'Logout'];
+const settings = [{name:'Profile',link:'/profile'}, {name:'Logout',link:'/logout'}];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -153,7 +154,7 @@ function ResponsiveAppBar() {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                  <Typography textAlign="center"><Link to={setting.link}>{setting.name}</Link></Typography>
                 </MenuItem>
               ))}
             </Menu>

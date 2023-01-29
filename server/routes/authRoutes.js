@@ -3,6 +3,6 @@ const authController=require('../controllers/authController.js')
 
 router.post('/signup',authController.register)
 
-router.get('/login',authController.login)
+router.post('/login',authController.login)
 
 module.exports=router

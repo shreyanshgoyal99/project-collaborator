@@ -53,7 +53,7 @@ handleKeyDown(event,label){
 }
 
 submit(){
-    console.log("on submitting")
+     fetch('http://localhost:8000/api/add-futuredomain',)
 }
 
 render() {
@@ -67,6 +67,10 @@ render() {
             </CardContent>
             ))}
                 <TextField id="standard-basic" onKeyDown={(e)=>{this.handleKeyDown(e,"futureDomain")}}  onChange={(e)=>{this.handleChange(e, "domain")}} style={{marginTop:"20px", width:"100%"}} label="Future Domain" variant="standard" />
+                <Button className="sign-button"variant="contained" onClick={()=>
+        {
+            this.submit()
+        }} >Submit</Button>
             </div>
             <div style={{margin:"0 30px", width:"35%", padding:"20px 40px", borderRadius:"5px", background:"white",boxShadow:"inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),0.3em 0.3em 1em rgba(0, 0, 0, 0.3)"}}>
             {this.state.skills.map(skill=>(
@@ -77,6 +81,7 @@ render() {
             ))}
                 <TextField id="standard-basic"  onKeyDown={(e)=>{this.handleKeyDown(e,"skills")}}  onChange={(e)=>{this.handleChange(e, "skill")}} style={{marginTop:"20px", width:"100%"}} label="Skills" variant="standard" />
             </div>
+
         </div>
     )
     }

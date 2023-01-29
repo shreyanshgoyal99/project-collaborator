@@ -35,7 +35,7 @@ export default function FormDialog() {
             id="standard-multiline-static"
             multiline
             rows={7}
-            defaultValue="Type your Idea"
+            name="Type your Idea"
             autoFocus
             margin="dense"
             label="Project Idea"

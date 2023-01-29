@@ -3,8 +3,7 @@ const userController=require('../controllers/userController.js')
 const jwtverify=require('../controllers/jwtverify.js')
 
 
-router.post('/add-project',jwtverify,userController.addProject)
-
-router.delete('/delete-project/:projectId',jwtverify,userController.deleteProject)
+router.post('/update-profile',jwtverify,userController.updateProfile)
+router.post('/update-profile',jwtverify,userController.updateProfile)
 
 module.exports=router

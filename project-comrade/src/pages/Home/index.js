@@ -5,30 +5,7 @@ class Home extends Component {
 
 constructor(props) {    
     super(props);
-    this.state={
-        username:"",
-        password:""
-    }
-}
-
-componentDidMount(){
-    let token = window.localStorage.getItem("authToken");
-    const { history } = this.props;
-    console.log("this is the token", token);
-    if(!token){
-        history.push("/login")
-    }
-}
-
-handleOnChange(event,label){
-    this.setState(prevState=>({
-        ...prevState,
-        [label]:event.target.value
-    }))
-}
-
-submit(){
-    console.log("on submitting")
+    
 }
 
 render() {

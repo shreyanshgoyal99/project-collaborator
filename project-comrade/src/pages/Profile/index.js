@@ -1,14 +1,14 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import About from '../../component/About';
-import Education from '../../component/Education/Education';
-import Experience from '../../component/Experience';
-import Links from '../../component/Links';
-import "./Profile.css"
+import * as React from "react";
+import PropTypes from "prop-types";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import { About } from "../../component/About";
+import Experience from "../../component/Experience";
+import Links from "../../component/Links";
+import AddPost from "../../component/AddPost"
+import "./Profile.css";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -39,7 +39,7 @@ TabPanel.propTypes = {
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
   };
 }
 
@@ -51,26 +51,30 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+    <Box sx={{ width: "100%" }}>
+      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="basic tabs example"
+        >
           <Tab label="ABOUT" {...a11yProps(0)} />
-          <Tab label="EDUCATION" {...a11yProps(1)} />
           <Tab label="EXPERIENCE" {...a11yProps(2)} />
           <Tab label="LINKS" {...a11yProps(1)} />
+          <Tab label="AddPost" {...a11yProps(3)} />
         </Tabs>
       </Box>
-      <TabPanel style={{padding:"0px"}} value={value} index={0}>
-        <About/>
+      <TabPanel style={{ padding: "0px" }} value={value} index={0}>
+        <About />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Education/>
+        <Experience />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <Experience/>
+        <Links />
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <Links/>
+        <AddPost />
       </TabPanel>
     </Box>
   );

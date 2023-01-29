@@ -6,15 +6,17 @@ const becrypt=require('bcryptjs')
 
 exports.register=async(req,res)=>
 {
+      console.log(req.body)
          try
          {
+
                 const isUserPresent=await User.findOne({email:req.body.email})
 
                 if(isUserPresent)
                 {
                       return  res.status(200).send({message:"user already present!",status:false})
                 }
-
+            
             const salt=await becrypt.genSalt(12)
             const password=await req.body.password
             const hashedpassword=await becrypt.hash(password,salt)
@@ -40,7 +42,7 @@ exports.login=async(req,res)=>
     
     try
     {
-      console.log(req.body)
+     
       const  user=await User.findOne({email:req.body.email})
 
       if(!user)
